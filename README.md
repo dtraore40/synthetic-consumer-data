@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Synthetic Consumer Data
 
 Synthetic data generation and modeling for consumer behavior analysis.
