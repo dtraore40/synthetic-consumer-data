@@ -78,11 +78,17 @@ venv/
 # Data (confidential)
 # -----------------------------
 
-# Ignore everything in data/
-data/**
+# Ignore all data files
+data/*
+!data/.gitkeep
 
-# Except .gitkeep files (keep folder structure)
-!data/**/.gitkeep
+!data/raw/
+data/raw/*
+!data/raw/.gitkeep
+
+!data/processed/
+data/processed/*
+!data/processed/.gitkeep
 
 
 # -----------------------------
