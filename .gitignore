@@ -42,7 +42,18 @@
 rsconnect/ 
 
 # pkgdown site
-docs/
+#docs/
+
+
+# -----------------------------
+# renv (R project environment)
+# -----------------------------
+
+renv/library/
+renv/staging/
+renv/cache/
+# keep renv.lock, activate.R, settings.json
+# .Rprofile 
 
 
 # -----------------------------
@@ -90,13 +101,15 @@ data/raw/*
 data/processed/*
 !data/processed/.gitkeep
 
+# data
+data_dictionary.qmd
+
 
 # -----------------------------
-# renv (R project environment)
+# results
 # -----------------------------
-renv/library/
-renv/staging/
-# keep renv.lock, activate.R, settings.json
+results/*
+!results/.gitkeep
 
 
 # -----------------------------
@@ -113,5 +126,19 @@ Thumbs.db
 # translation temp files during the translation of R packages
 po/*~
 
+
+# -----------------------------
+# Oth
+# -----------------------------
+
 # test
 test2.qmd
+
+.gitignore
+
+
+
+
+
+
+

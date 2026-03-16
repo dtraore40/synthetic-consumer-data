@@ -24,28 +24,6 @@ preprocessing, and exploratory analysis.
 
 ## Project Structure
 
-```{r}
-synthetic-consumer-data/
-│
-├── data/                    # Data folder (ignored on GitHub)
-│   ├── raw/                 # Original datasets (no modifications)
-│   └── processed/           # Cleaned / transformed datasets
-│
-├── scripts/                 # Scripts for data generation and preprocessing
-│   ├── data_generation.R
-│   └── preprocessing.py
-│
-├── notebooks/               # Exploratory analysis and experiments
-│
-├── results/                 # Outputs, figures, and model results
-│
-├── renv/                    # Internal R environment folder (ignored by Git)
-├── renv.lock                # R package dependencies for reproducibility
-├── requirements.txt         # Python dependencies for reproducibility
-├── .gitignore               # Git ignore rules
-└── README.md                # Project documentation
-
-```
 
 ## Data
 
@@ -59,17 +37,11 @@ sensitive or large datasets.
 To ensure reproducibility, the required Python packages are listed in
 `requirements.txt`.
 
-**Steps to recreate the Python environment:**
+**Recreate the Python environment:**
 
 ```{Bash}
-# Install pipreqs (optional, for regenerating requirements.txt)
-pip install pipreqs
-
 # Install all required packages
 pip install -r requirements.txt
-
-# Generate or update requirements.txt based on the packages actually used
-pipreqs ./ --force
 ```
 
 > Only the Python packages actually used in the project will be
@@ -79,7 +51,7 @@ pipreqs ./ --force
 
 All R package dependencies are tracked using `renv`.
 
-**Steps to recreate the R environment:**
+**Recreate the R environment:**
 
 ```{r}
 # Install renv if not already installed
@@ -87,12 +59,6 @@ install.packages("renv")
 
 # Restore R environment on another machine using renv.lock
 renv::restore()
-
-# Initialize renv for a new R project (optional if the project is already set up)
-renv::init()
-
-# Save current R packages to renv.lock after installing new packages
-renv::snapshot()
 ```
 
 > `renv.lock` ensures that **all required R packages with the exact
